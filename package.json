@@ -1,5 +1,5 @@
 {
-	"name": "node-texas",
+	"name": "node-texas-evaluator",
 	"description": "Texas Hold'em hand evaluator for node.js.",
 	"homepage": "http://decs.github.com/texas/",
 	"version": "0.1.0",
