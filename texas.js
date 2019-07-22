@@ -203,5 +203,4 @@ module.exports = {
 		console.log('Total: ' + total);
 		console.log((finish - start) + 'ms');
 	},
-	getCode,
 };
