@@ -6,7 +6,6 @@ var _ = require('underscore');
 var fs = require('fs');
 var crypto = require('crypto');
 var zlib = require('zlib');
-var memcpy = require('memcpy');
 
 // ## Definitions
 
@@ -32,9 +31,7 @@ var hands = ['Invalid', 'High Card', 'One Pair', 'Two Pairs',
 // Loads the look-up table.
 var buffer = fs.readFileSync(__dirname + '/HandRanks.dat.gz');
 var zbuffer = zlib.gunzipSync(buffer);
-var bufferArray = new ArrayBuffer(zbuffer.length);
-memcpy(bufferArray,0,zbuffer);
-var evaluator = new Int32Array(bufferArray);
+var evaluator = new Int32Array(zbuffer.buffer);
 
 // ## Internal Functions
 
@@ -205,5 +202,6 @@ module.exports = {
 		}
 		console.log('Total: ' + total);
 		console.log((finish - start) + 'ms');
-	}
+	},
+	getCode,
 };
