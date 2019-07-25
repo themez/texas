@@ -2,7 +2,7 @@
 	"name": "node-texas-evaluator",
 	"description": "Texas Hold'em hand evaluator for node.js.",
 	"homepage": "http://decs.github.com/texas/",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": {
 		"name": "André Costa",
 		"email": "andrecosta90@gmail.com"
